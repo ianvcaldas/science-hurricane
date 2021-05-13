@@ -1,0 +1,105 @@
+(Initialize parameters)
+plim is 0.99
+temphalf is 0.5
+svar is 0.01
+pvar is 0.01
+tempone is 1
+numybins is 8
+put tempone + svar into wgood
+let whet be tempone + temphalf * svar
+let yincrement be tempone / numybins
+let wbad be tempone
+
+(Declare variables holding ASCII codes)
+intdot is 46
+intzero is 48
+intx is 120
+intbar is 124
+intone is 49
+intspace is 32
+inthyphen is 45
+justfour is 4
+
+Throwaway One says something
+
+(Define function for next generation's frequency)
+Next Frequency takes Freq
+	put Freq into Alternate
+	put Freq * wgood + whet into W Tempone
+	put Freq * whet + wbad into W Temptwo
+	let W One be W Tempone - Freq * whet
+	let W Two be W Temptwo - Freq * wbad
+	let First Half be Alternate * W One + W Two
+	put First Half - Freq * W Two into W Bar
+	give back Freq * W One / W Bar
+
+(Create array of frequencies)
+rock the freqs
+While pvar is weaker than plim,
+	let pnext be Next Frequency taking pvar
+	put pnext into pvar
+	rock the freqs with pvar
+
+(Initialize plotting variables)
+let freqsother be the freqs
+numxbins is 30
+put freqsother / numxbins into xincrement
+turn up xincrement
+If numxbins is stronger than freqsother,
+	xincrement is 1
+
+Throwaway Two says something
+
+ztemp is 0
+yvar is 0
+strallf says allele frequency
+strgen says generations
+
+(Make ASCII strings)
+cast intbar into strbar
+cast intspace into strspace
+cast intone into strone
+cast intzero into strzero
+cast intdot into strdot
+cast inthyphen into strhyphen
+put strspace * justfour into strfourspaces
+whisper strallf
+let altzero be strzero
+
+(Plot)
+while numybins is stronger than yvar,
+	let upperlim be tempone - yvar * yincrement
+	put yvar + tempone into ytemp
+	put tempone - ytemp * yincrement into lowerlim
+	let line be strfourspaces + strbar
+	if yvar is ztemp,
+		let line be strone + strdot, altzero, strspace, strbar
+
+if yvar is numybins - tempone,
+	let line be strzero + strdot, altzero, strspace, strbar
+
+xvar is 0
+while xvar is weaker than freqsother,
+	let otherxv be xvar
+	put the freqs at otherxv into current
+	cast intspace into point
+	if current is stronger than lowerlim and upperlim is stronger than current
+		cast intx into point
+
+let line be + point
+let xvar be + xincrement
+
+whisper line
+build yvar up
+
+(Finally, print out x-axis)
+put strfourspaces into xaxis
+let xaxis be + strhyphen * numxbins
+shout xaxis
+
+put strfourspaces + strone into xannot
+let xannot be + strspace * numxbins
+let xannot be + xincrement * numxbins
+let xannot be + strspace 
+put xannot + strgen into altxan
+scream altxan
