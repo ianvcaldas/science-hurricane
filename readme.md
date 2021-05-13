@@ -1,8 +1,10 @@
 ## Science Hurricane
 
-Science Hurricane is a bad grad school-themed rock n'roll love ballad whose lyrics are also a fully functioning program in the language Rockstar. The song simulates the trajectory of a mutation favored by natural selection in an infinite population, and plots the results.
+This is a bad grad school-themed rock n'roll love ballad.
 
-The easiest way to run this rock ballad is to go to [the Rockstar online interpreter](https://codewithrockstar.com/online), paste the song into the input box, and run it. You should see the results in the output box.
+It is also a computer program written in the language [Rockstar](https://codewithrockstar.com/). The song simulates a classic model of population genetics describing the trajectory of a mutation favored by natural selection in an infinite population and plots the results.
+
+The easiest way to run this bad ballad computer program is to go to [the Rockstar online interpreter](https://codewithrockstar.com/online), paste the song into the input box, and run it. You should see the results in the output box.
 
 ```
 (Science Hurricane)
@@ -129,7 +131,7 @@ To change selection strength:
 * To make it a stronger mutation with s = 0.1: `Your paper is uninspired. Unwarranted!`
 * To make it a weaker mutation with s = 0.001: `Your paper is uninspired. Completely, definitely unqualified`
 
-You can also change the starting frequency of the beneficial mutation (the default is 1%) and even the plotting dimensions. I'll let you write your own lyrics for that.
+For those willing to write their own lyrics, you can also change the starting frequency of the beneficial mutation (the default is 1%) and even the plotting dimensions.
 
 ### Behind the scenes
 
