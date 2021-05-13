@@ -119,7 +119,7 @@ Where `A` is the beneficial mutation. Both h and s are fully customizable, but h
 
 To change the dominance, switch the line:
 
-* The default mutation has additive effect (h = 0.5): `The effort was meaningless. Wasted.`
+* The default mutation has additive effect (h = 0.5): `The effort was irrelevant. Waste.`
 * To make it recessive (h = 0): `The effort was empty...`
 * To make it dominant (h = 1): `The effort was purposeless!`
 
