@@ -2,9 +2,7 @@
 
 This is a bad grad school-themed rock n'roll love ballad.
 
-It is also a computer program written in the language [Rockstar](https://codewithrockstar.com/). The song simulates a classic model of population genetics describing the trajectory of a mutation favored by natural selection in an infinite population and plots the results.
-
-The easiest way to run this bad ballad computer program is to go to [the Rockstar online interpreter](https://codewithrockstar.com/online), paste the song into the input box, and run it. You should see the results in the output box.
+It is also a computer program that does a population genetics simulation. It tracks and plots the fate of a new mutation favoured by natural selection. It's written in the Rockstar programming language; to see the output, you can run the song in [the Rockstar online interpreter](https://codewithrockstar.com/online).
 
 ```
 (Science Hurricane)
@@ -109,15 +107,15 @@ Put the paper with a thunderbolt into your thesis
 Scream your thesis
 ```
 
-### Ballad customization
+### The science bit
 
-Fitness of the genotypes are parameterized as:
+The program simulates a classic population genetics model describing the trajectory of an allele favoured by natural selection in an infinite diploid population. Fitness of the genotypes are parameterized as:
 
 	w(AA) = 1 + s
 	w(Aa) = 1 + hs
 	w(aa) = 1
 	
-Where `A` is the beneficial mutation. Both h and s are fully customizable, but here are some suggestions:
+Where `A` is the beneficial mutation.
 
 To change the dominance, switch the line:
 
@@ -131,8 +129,10 @@ To change selection strength:
 * To make it a stronger mutation with s = 0.1: `Your paper is uninspired. Unwarranted!`
 * To make it a weaker mutation with s = 0.001: `Your paper is uninspired. Completely, definitely unqualified`
 
-For those willing to write their own lyrics, you can also change the starting frequency of the beneficial mutation (the default is 1%) and even the plotting dimensions.
+You can also change the starting frequency of the beneficial mutation (the default is 1%) and the plotting dimensions.
 
-### Behind the scenes
+### The computer bit
 
 `popgen.py` contains the simulation and plotting code in readable Python. (Most of the code is dedicated to implementing a really bare-bones and quite imperfect ASCII plotting strategy.) I adapted the logic into boring ("minimalist") Rockstar; the script `sing.py` converts that into proper ("idiomatic") Rockstar. The final version of the ballad is the idiomatic file plus capitalization and slight reordering of lines.
+
+Many thanks to Dylan Beattie for creating Rockstar and giving everyone the opportunity to become a rock star graduate student!
