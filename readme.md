@@ -2,7 +2,7 @@
 
 This is a bad grad school-themed rock n'roll love ballad.
 
-It is also a computer program that does a population genetics simulation. It tracks and plots the fate of a new mutation favoured by natural selection. It's written in the Rockstar programming language; to see the output, you can run the song in [the Rockstar online interpreter](https://codewithrockstar.com/online).
+It is also a computer program written in [Rockstar](https://codewithrockstar.com). It simulates adaptive evolution, tracking the fate of a mutation favoured by natural selection and plotting its frequency in the population through time. Paste the song in [the Rockstar online interpreter](https://codewithrockstar.com/online) to see it in action.
 
 ```
 (Science Hurricane)
@@ -109,7 +109,7 @@ Scream your thesis
 
 ### The science bit
 
-The program simulates a classic population genetics model describing the trajectory of an allele favoured by natural selection in an infinite diploid population. Fitness of the genotypes are parameterized as:
+The ballad simulates a classic population genetics model describing the trajectory of an allele favoured by natural selection in a single locus of an infinite diploid population<sup>1</sup>. Fitness of the genotypes are parameterized as:
 
 	w(AA) = 1 + s
 	w(Aa) = 1 + hs
@@ -131,8 +131,12 @@ To change selection strength:
 
 You can also change the starting frequency of the beneficial mutation (the default is 1%) and the plotting dimensions.
 
-### The computer bit
+<sup>1</sup> Described in, for instance, equation 1.6 of _Evolutionary Theory: Mathematical and Conceptual Foundations_ (Rice, 2004).
 
-`popgen.py` contains the simulation and plotting code in readable Python. (Most of the code is dedicated to implementing a really bare-bones and quite imperfect ASCII plotting strategy.) I adapted the logic into boring ("minimalist") Rockstar; the script `sing.py` converts that into proper ("idiomatic") Rockstar. The final version of the ballad is the idiomatic file plus capitalization and slight reordering of lines.
+### The coding bit
 
-Many thanks to Dylan Beattie for creating Rockstar and giving everyone the opportunity to become a rock star graduate student!
+`popgen.py` contains the simulation and plotting code in readable Python. (Most of the code is dedicated to doing the ASCII plot in an embarassingly bare-bones way.) I adapted the logic into boring ("minimalist") Rockstar; the script `sing.py` converts that into proper ("idiomatic") Rockstar. The final version of the ballad is the idiomatic file plus capitalization and slight reordering of lines.
+
+### Big thank you
+
+...to [Dylan Beattie](https://dylanbeattie.net/) for creating Rockstar and providing the inspiration to become, finally, one of those rockstar scientists everyone keeps talking about.
